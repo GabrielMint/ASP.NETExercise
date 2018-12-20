@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @model ExercicioUm.Models.Pessoa
+}
+
+<h4>Cadastro de Pessoas</h4>
+
+<div>
+    @using (Html.BeginForm("Create", "Pessoa"))
+    {
+        @Html.LabelFor(model => Model.Nome)
+        @Html.EditorFor(model => Model.Nome)
+        <br />
+        @Html.LabelFor(model => Model.DataNascimento)
+        @Html.EditorFor(model => Model.DataNascimento)
+        <br />
+        @Html.LabelFor(model => Model.Cpf)
+        @Html.TextBoxFor(model => Model.Cpf)
+        <br />
+        @Html.LabelFor(model => Model.Email)
+        @Html.TextBoxFor(model => Model.Email)
+        <br />
+        @Html.LabelFor(model => Model.Telefone)
+        @Html.TextBoxFor(model => Model.Telefone)
+        <br />
+        <button type="submit" value="Enviar" />
+    }
+</div>
+
+
+
+
+
+
+
+
